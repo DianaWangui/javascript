@@ -3,12 +3,13 @@ p {
   padding: 0px;
   text-align: center;
   margin-top: 8px;
+  font-family: Roboto;
 }
 
 .new {
   text-align: center;
   color: orangered;
-  font-family: Arial;
+  font-family: Roboto;
   font-size: 15px;
 }
 
