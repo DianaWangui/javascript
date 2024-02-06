@@ -4,26 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Box Model</title>
+  <style>
+    /* pagination styles*/
+    p {
+      font-weight: bold;
+    }
+    .link-next, .link-back {
+      padding: 10px;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .link-next {
+      margin-left: 10px;
+    }
+    a {
+      font-size: 20px;
+      color: black;
+    }
+
+    /*Stretch style*/
+    .button-stretch, .button-shadow, .together {
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      border: 1px solid green;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    .button-stretch {
+      transition: padding 0.15s;
+    }
+    .button-stretch:hover {
+      padding: 24px 40px;
+    }
+    
+  /*shadow buttons css*/
+    .button-shadow {
+      transition: padding 0.15s;
+    }
+
+    .button-shadow:active {
+      padding: 8px 14px;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+ /*Margin and padding together buttons*/
+    .together {
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: padding 0.15s, margin 0.15s;
+    }
+   
+    .together:hover {
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  </style>
 </head>
 <body>
   <p>4h. Pagination</p>
-  <button>Back</button>
+  <button class="link-back">Back</button>
   <a href="">1</a>
   <a href="">2</a>
   <a href="">3</a>
   <a href="">4</a>
   <a href="">5</a>
-  <button>Next</button>
+  <button class="link-next">Next</button>
 
   <p>4i. Stretch</p>
-  <button>Stretch</button>
+  <button class="button-stretch">Stretch</button>
 
   <p>3D Click</p>
-  <button>Shadow</button>
+  <button class="button-shadow">Shadow</button>
 
   <p>4k. Margin and Padding together</p>
-  <button>One</button>
-  <button>Two</button>
-  <button>Three</button>
+  <button class="together">One</button>
+  <button class="together">Two</button>
+  <button class="together">Three</button>
 </body>
 </html>
