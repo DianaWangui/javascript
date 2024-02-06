@@ -4,14 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amazon</title>
+  <style>
+    .add-cart {
+      background-color: rgb(247, 207, 29);
+      border: 1px solid rgb(247, 207, 29);
+      height: 30px;
+      width: 100px;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 5;
+      cursor: pointer;
+    }
+    .buy-now {
+      background-color: rgb(255, 164, 28);
+      border: 1px solid rgb(255, 164, 28);
+      height: 30px;
+      width: 100px;
+      border-radius: 15px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .stock {
+      color: rgb(0, 118, 0);
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .purpose {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .delivery {
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
-  <a href="google.com" target="_blank">Search with Google</a> <br>
   <a href="amazon.com" target="_blank">Back to Amazon</a>
-  <p>Nike Black Running Shoes</p>
-  <p>$39 - in stock</p>
-  <p>Free delivery tomorrow.</p>
-  <button>Add to Cart</button>
-  <button>Buy now</button>
+  <p class="purpose">Nike Black Running Shoes</p>
+  <p class="stock">$39 - in stock.</p>
+
+  <p class="delivery">Free delivery tomorrow.</p>
+
+  <button class="add-cart">Add to Cart</button>
+  <button class="buy-now">Buy now</button>
 </body>
 </html>
