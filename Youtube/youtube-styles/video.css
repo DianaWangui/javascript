@@ -3,7 +3,8 @@
 }
 
 .thumbnail {
-  width: 100%
+  width: 100%;
+  border-radius: 10px;
 }
 
 .author,
@@ -22,12 +23,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 15px;
-  row-gap: 50px;
+  row-gap: 30px;
+
 }
 
 
 .video-info-grid {
   display: grid;
+  margin-left: 10px;
   grid-template-columns: 50px 1fr;
 
 }
@@ -43,4 +46,8 @@
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 13px;
+}
+
+.video-info {
+  margin-left: 12px;
 }
