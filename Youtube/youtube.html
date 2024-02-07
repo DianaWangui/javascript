@@ -3,19 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="youtube-styles/youtube.css">
+  <link rel="stylesheet" href="youtube-styles/video.css">
+  <link rel="stylesheet" href="youtube-styles/general.css">
+  <link rel="stylesheet" href="youtube-styles/header.css">
   <title>Youtube.com Clone</title>
   <style>
-   .video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 15px;
-    row-gap: 50px;
+   .header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
    }
   </style>
 </head>
 <body>
-  <input class="search-bar" type="text" placeholder="Search">
+  <!--The upper bar with the search bar, logins and youtube logo-->
+  <div class="header">
+    <div class="left-section">
+
+    </div>
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+    </div>
+    <div class="right-section">
+
+    </div>
+  </div>
+
+
+  <!--The youtube body with contents-->
   <div class="video-grid">
     <!--Video set 1-->
 <div class="video-player">
