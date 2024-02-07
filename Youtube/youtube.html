@@ -6,47 +6,135 @@
   <link rel="stylesheet" href="youtube-styles/youtube.css">
   <title>Youtube.com Clone</title>
   <style>
-   
+   .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 50px;
+   }
   </style>
 </head>
 <body>
   <input class="search-bar" type="text" placeholder="Search">
-<!--Video set 1-->
-  <div class="video-player">
-    <div >
-      <img class="thumbnail" src="images/cobbythumbnail.webp" alt="Thumbnail">
-    </div>
-
-    <div>
-      <div class="channel-profile">
-        <img class="profile1" src="images/cobby1.jpg" alt="profile">
-      </div>
-
-      <div class="video-info">
-        <p class="title">Lets Deep Dive to The Airbnb Clone Project c18</p>
-        <p class="author">Code With cobby </p>
-        <p class="stats">5.4M views &#183; 2 months ago</p>
-      </div>
-    </div>
-
+  <div class="video-grid">
+    <!--Video set 1-->
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/cobbythumbnail.webp" alt="Thumbnail">
   </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/cobby1.jpg" alt="profile">
+    </div>
+
+    <div class="video-info">
+      <p class="title">Lets Deep Dive to The Airbnb Clone Project c18</p>
+      <p class="author">Code With cobby </p>
+      <p class="stats">2.2K views &#183; 1 month ago</p>
+    </div>
+  </div>
+
+</div>
 <!--Video set 2-->
-  <div class="video-player">
-    <div >
-      <img class="thumbnail" src="images/dianathumbnail.webp" alt="Thumbnail">
-    </div>
-
-    <div>
-      <div class="channel-profile">
-        <img class="profile1" src="images/diana1.jpg" alt="profile">
-      </div>
-
-      <div class="video-info">
-        <p class="title">Try Not To Laugh Challenge!</p>
-        <p class="author">Diana Velmah </p>
-        <p class="stats">5.4M views &#183; 2 months ago</p>
-      </div>
-    </div>
-
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/dianathumbnail.webp" alt="Thumbnail">
   </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/diana1.jpg" alt="profile">
+    </div>
+
+    <div >
+      <p class="title">Try Not To Laugh Challenge!</p>
+      <p class="author">Diana Velmah </p>
+      <p class="stats">5.4K views &#183; 2 months ago</p>
+    </div>
+  </div>
+
+</div>
+
+<!--Video set 3-->
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/julien1.webp" alt="Thumbnail">
+  </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/julien1p.jpg" alt="profile">
+    </div>
+
+    <div class="video-info">
+      <p class="title">Linked Lists live coding session | C programming | ALX SE</p>
+      <p class="author">Veni, Codi, Vici, with 0xJulien</p>
+      <p class="stats">2.1K views &#183; Streamed 1 day ago</p>
+    </div>
+  </div>
+
+</div>
+
+<!--Video set 4-->
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/thumbnail4.webp" alt="Thumbnail">
+  </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/mar4.jpg" alt="profile">
+    </div>
+
+    <div >
+      <p class="title">Try Not To Laugh Challenge!</p>
+      <p class="author">Marques Brownlee </p>
+      <p class="stats">22M views &#183; 6 days ago</p>
+    </div>
+  </div>
+
+</div>
+
+<!--Video set 5-->
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/obedthum.jpg" alt="Thumbnail">
+  </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/obedprof.jpg" alt="profile">
+    </div>
+
+    <div class="video-info">
+      <p class="title">Lets Deep Dive to The Airbnb Clone Project c18</p>
+      <p class="author"> Dr. Ehoneah Obed</p>
+      <p class="stats">28K views &#183;  1 year ago</p>
+    </div>
+  </div>
+
+</div>
+<!--Video set 6-->
+<div class="video-player">
+  <div class="thumbnail-profile">
+    <img class="thumbnail" src="images/christinaprofile.jpg" alt="Thumbnail">
+  </div>
+
+  <div class="video-info-grid">
+    <div class="channel-profile">
+      <img class="profile1" src="images/chrprofile.jpg" alt="profile">
+    </div>
+
+    <div >
+      <p class="title">Try Not To Laugh Challenge!</p>
+      <p class="author">Christina Perri </p>
+      <p class="stats">2.3B views &#183; 12 years ago</p>
+    </div>
+  </div>
+
+</div>
+  </div>
+
+</body>
 </html>

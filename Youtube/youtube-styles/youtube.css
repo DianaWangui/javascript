@@ -4,8 +4,12 @@ p {
   margin-bottom: 0;
 }
 
+.thumbnail-profile {
+  margin-bottom: 12px;
+}
+
 .thumbnail {
-  width: 300px;
+  width: 100%
 }
 
 .search-bar {
@@ -27,19 +31,19 @@ p {
   margin-bottom: 4px;
 }
 
-/*Divs*/
-.video-player {
-  width: 300px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
+/*Using grid to replace the display block*/
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 50px;
 }
 
-/*Nested layouts styles*/
-.channel-profile {
-  display: inline-block;
-  width: 50px;
-  vertical-align: top;
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
 }
 
 .profile1 {
@@ -53,13 +57,4 @@ p {
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 13px;
-}
-
-.video-info {
-  display: inline-block;
-  width: 200px;
-}
-
-.thumbnail-profile {
-  margin-bottom: 12px;
 }
