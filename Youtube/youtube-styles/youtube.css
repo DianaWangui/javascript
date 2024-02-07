@@ -10,10 +10,6 @@
   display: block;
 }
 
-.title {
-  width: 300px;
-}
-
 .author,
 .stats {
   display: block;
@@ -25,4 +21,25 @@
   display: inline-block;
   vertical-align: top;
   margin-right: 10px;
+}
+
+/*Nested layouts styles*/
+.channel-profile {
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+}
+
+.profile1 {
+  width: 100%;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.video-info {
+  display: inline-block;
+  width: 200px;
+
 }
