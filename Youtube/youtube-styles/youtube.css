@@ -4,5 +4,17 @@
 
 .search-bar {
   font-size: 20px;
-  margin-left: 12px;
+}
+
+.search-bar {
+  display: block;
+}
+
+.title {
+  width: 300px;
+}
+
+.author,
+.stats {
+  display: block;
 }
