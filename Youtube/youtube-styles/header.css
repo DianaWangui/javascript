@@ -7,12 +7,21 @@
   border-radius: 15px;
   box-shadow: inset 1px 2px 3px rgba(15, 15, 15, 0.05);
   min-width: 40px;
+
 }
 
 .search-icon {
-  height: 23px;
-  margin-top: 3px;
+  height: 25px;
+  margin-top: 4px;
 
+}
+
+.search-button,
+.voice-button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-button {
@@ -24,6 +33,29 @@
   border: none;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.02);
   cursor: pointer;
+}
+
+.search-button .tooltip,
+.voice-button .tooltip {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  bottom: -100;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip {
+  opacity: 1;
 }
 
 .voice-button {
@@ -38,7 +70,6 @@
 
 .voice-icon {
   height: 22px;
-  margin-top: 3px;
 }
 
 .search-bar::placeholder {
