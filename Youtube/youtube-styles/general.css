@@ -7,3 +7,11 @@ p {
 body {
   margin: 1px;
 }
+
+
+body {
+  height: 1000px;
+  /*TO BE REMOVED*/
+  padding-top: 80px;
+
+}
