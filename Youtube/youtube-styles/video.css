@@ -1,5 +1,6 @@
 .thumbnail-profile {
   margin-bottom: 12px;
+  position: relative;
 }
 
 .thumbnail {
@@ -50,4 +51,17 @@
 
 .video-info {
   margin-left: 12px;
+}
+
+/*time styling with positions, relative first then absolute */
+
+.video-time {
+  background-color: black;
+  font-family: Roboto, Arial;
+  padding: 3px;
+  color: white;
+  position: absolute;
+  bottom: 9px;
+  right: 6px;
+  border-radius: 3px;
 }

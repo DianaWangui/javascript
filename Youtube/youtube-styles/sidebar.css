@@ -1,7 +1,23 @@
 .side-bar {
+  /* display: flex;
+  flex-direction: column; */
   position: fixed;
   left: 0;
   bottom: 0;
   top: 55px;
-  width: 90px;
+  width: 85px;
+  background-color: white;
+}
+
+.side-bar-link {
+  height: 75px;
+}
+
+.side-bar-link:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.home-icon {
+  height: 30px;
+
 }
