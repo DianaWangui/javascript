@@ -2,11 +2,14 @@ p {
   font-family: Roboro, Arial;
   margin-top: 0;
   margin-bottom: 0;
+
 }
 
 body {
-  margin: 1px;
-  margin-left: 95px;
+  margin: 0;
+  padding-left: 100px;
+  padding-right: 30px;
+
 }
 
 

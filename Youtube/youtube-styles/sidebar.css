@@ -1,23 +1,34 @@
 .side-bar {
-  /* display: flex;
-  flex-direction: column; */
+  padding-top: 23px;
   position: fixed;
   left: 0;
   bottom: 0;
   top: 55px;
   width: 85px;
   background-color: white;
+  z-index: 200;
+  cursor: pointer;
 }
 
 .side-bar-link {
   height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .side-bar-link:hover {
   background-color: rgb(241, 241, 241);
+  border-radius: 10px;
 }
 
-.home-icon {
-  height: 30px;
+.side-bar-link img {
+  height: 25px;
+  margin-bottom: 10px;
+}
 
+.side-bar-link div {
+  font-size: 10px;
+  font-family: Roboto, Arial;
 }
