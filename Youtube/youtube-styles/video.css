@@ -25,9 +25,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 15px;
   row-gap: 30px;
-
 }
-
 
 .video-info-grid {
   display: grid;
@@ -54,10 +52,11 @@
 }
 
 /*time styling with positions, relative first then absolute */
-
 .video-time {
   background-color: black;
   font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: bold;
   padding: 3px;
   color: white;
   position: absolute;
