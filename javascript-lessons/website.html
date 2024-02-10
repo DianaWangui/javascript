@@ -5,32 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    button {
-      background-color: red;
-      color: white;
+    .add-cart {
+      background-color: yellow;
+      color: black;
+    }
+
+    .buy-now {
+      background-color: orange;
+      color: black;
     }
   </style>
   <title>Amazon with JS</title>
 
 </head>
 <body>
-  <button onclick="
+  <!-- <button onclick="
     alert('Good morning');
     ">
-    Hello
-  </button>
-<p>Welcome here</p>
+    Click
+  </button> -->
+  <p>Adults Plain Cotton T-shirt</p>
+  <p>Price: $7.99</p>
+
+  <button class="add-cart" onclick="
+  alert('Added')
+  ">Add to cart</button>
+  <button class="buy-now"
+  onclick="
+  alert('Purchased')
+  ">Buy now</button>
+  <p>
+    Hello world
+  </p>
+  <p>Today I learn some c programming</p>
+
+
 
 <script>
   //My first javascript
-  //this code creates a popup
 
-  // alert("Hello");
+  alert("Welcome");
 
-  /*Multiline comment in js 
-  here it takes more than one comment */
+  console.log("Purchased");
 
   console.log(2 + 2);
+  console.log("This will be seen on the inspect console");
 </script>
 </body>
 </html>
