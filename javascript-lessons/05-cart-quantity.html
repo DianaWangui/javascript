@@ -13,26 +13,69 @@
 
   <!--To call variables use backticks and ${} inside a string-->
   <p>Cart Quantity</p>
+
   <button onclick="
     console.log(`Cart Quantity: ${cartQuantity}`);
-  ">Show Quantity</button>
+    ">
+    Show Quantity
+  </button>
   <button onclick="
     cartQuantity += 1;
     console.log(`Cart Quantity: ${cartQuantity}`);
-  ">Add to Cart</button>
+    ">
+    Add to Cart
+  </button>
   <button onclick="
     cartQuantity += 2;
-    console.log(`Cart Quantity: ${cartQuantity}`)
-  ">+2</button>
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    +2
+  </button>
   <button onclick="
     cartQuantity += 3;
-    console.log(`Cart Quantity: ${cartQuantity}`)
-  ">+3</button>
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    +3
+  </button>
+  <button onclick="
+    cartQuantity += 4;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+    +4
+  </button>
+  <button onclick="
+  cartQuantity += 5;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+  +5
+  </button>
+  <button onclick="
+  cartQuantity -= 1;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+  Remove From Cart
+  </button>
+  <button onclick="
+  cartQuantity -= 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+  -2
+  </button>
+  <button onclick="
+  cartQuantity -= 3;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+  -3
+  </button>
   <button onclick="
     cartQuantity = 0;
     console.log('Cart was Reset');
     console.log(`Cart Quantity: ${cartQuantity}`)
-  ">Reset Cart</button>
+    ">
+    Reset Cart
+  </button>
+
+
 <script>
   /*Declare variables*/
   let cartQuantity = 0;
