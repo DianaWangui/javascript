@@ -22,6 +22,14 @@
           console.log(`Hi! I'm ${this.name.first} ${this.name.second}.`);
         },
       };
+/*We could then add this new member name and value to the person object like this:*/
+
+      const myDataName = "height";
+      const myDataValue = "1.75m";
+      person[myDataName] = myDataValue;
+      /*Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.*/
+
+      
 /*In the example below, the logProperty() function can use person[propertyName] to retrieve the value of the property named in propertyName.*/
       function logProperty(propertyName) {
         console.log(person[propertyName]);
