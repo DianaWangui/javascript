@@ -13,18 +13,21 @@
     
     <script>
       const person = {
-        name: {
-          first: "Diana",
-          second: "Wangui"
-        },
+        name: ["Diana","Wangui"],
         age: 26,
         bio() {
-          console.log(`${this.name.first} ${this.name.secong} is ${this.age} years old.`);
+          console.log(`${this.name.first} ${this.name.second} is ${this.age} years old.`);
         },
-        introduceSelf: function () {
-          console.log(`Hi! I'm ${this.name[0]}.`);
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name.first} ${this.name.second}.`);
         },
       };
+
+      function logProperty(propertyName) {
+        console.log(person[propertyName]);
+      }
+      logProperty("name");
+      logProperty("age");
     </script>
   </body>
 
