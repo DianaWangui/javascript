@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Object Constructors</title>
+</head>
+<body>
+  <script>
+/*We would like a way to define the "shape" of an object — the set of methods and the properties it can have — and then create as many objects as we like, just updating the values for the properties that are different.
+The first version of this is just a function:*/
+
+  function createPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);
+  };
+  return obj;
+}
+
+/*Creating a constructor*/
+
+    function Person (name) {
+      this.name = name;
+      this.introduceYourself = function () {
+        console.log(`Hi Im ${this.name}.`);
+      };
+    }
+  </script>
+</body>
+</html>
