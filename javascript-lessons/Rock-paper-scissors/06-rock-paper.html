@@ -11,7 +11,7 @@
     button {
       height: 250px;
       width: 250px;
-      margin: 5px;
+      margin: 10px;
       cursor: pointer;
     }
     button:hover {
@@ -33,8 +33,22 @@
 </head>
 <body>
   <div class="game">
-    <button>
+    <button onclick="
+    const randomNum = Math.random();
+    if (randomNum >= 0 && randomNum < 1/3 ) {
+      const compMove = 'Rock';
+      console.log()
+    }
+    else if (randomNum >= 1/3 && randomNum < 2/3) {
+      const compMove = 'Paper';
+    }
+    else {
+      const compMove = 'Scissors'; 
+    }
+    ">
+    
       <img src="images/rock.png" alt="">
+
     </button>
     <button>
       <img src="images/paper.png" alt="">
