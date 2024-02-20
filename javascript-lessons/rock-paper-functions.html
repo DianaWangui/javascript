@@ -96,7 +96,6 @@
       }
 
       else if (playerMove === 'Scissors') {
-        const compMove = getComputerMove();
         if (compMove === 'Rock') {
           result = 'You lost';
         } else if (compMove === 'Paper') {
@@ -106,14 +105,13 @@
         }
       }
       else if (playerMove === 'Rock') {
-        const compMove = getComputerMove();
         if (compMove === 'Rock') {
           result = 'Its a Tie';
         }
         else if (compMove === 'Paper') {
           result = 'You lost';
         }
-        else {
+        else if (compMove === 'Scissors') {
           result = 'You won';
         }
       }
