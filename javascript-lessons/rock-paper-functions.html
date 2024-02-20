@@ -55,67 +55,70 @@
 <!--ROCK-->
   <div class="game">
     <button onclick="
-      const compMove = getComputerMove();
-
-      // let result = '';
-      if (compMove === 'Rock') {
-        result = 'Its a Tie';
-      }
-      else if (compMove === 'Paper') {
-        result = 'You lost';
-      }
-      else {
-        result = 'You won';
-      }
-      alert(`You picked Rock. Computer picked ${compMove}. ${result}`);
+      playerMove('Rock');
     ">
       <img src="images/rock.png" alt="">
     </button>
 
 <!--PAPER-->
     <button onclick="
-      getComputerMove();
-
-      // let result = '';
-      if (compMove === 'Rock') {
-        result = 'You won';
-      }
-      else if (compMove === 'Paper') {
-        result = 'Its a Tie';
-      }
-      else {
-        result = 'You lost';
-      }
-      alert(`You picked Paper. Computer picked ${compMove}. ${result}`);
+      playerMove('Paper');
     ">
       <img src="images/paper.png" alt="">
     </button>
 
 <!--SCISSORS-->
     <button onclick="
-      getComputerMove();
-
-      // let result = '';
-      if (compMove === 'Rock') {
-        result = 'You lost';
-      }
-      else if (compMove === 'Paper') {
-        result = 'You won';
-      }
-      else {
-        result = 'Its a Tie';
-      }
-
-      alert(`You picked Scissors. Computer picked ${compMove}. ${result}`);
+    playerMove('Scissors');
     ">
-      <img src="images/scissors.jpg" alt="">
+      <img src="images/scissors.jpg" alt=""> 
     </button>
+
   </div>
 
   <!--Javascript-->
   <script>
     let randomNum = Math.random();
     let result = '';
+
+    function playerMove(playerMove) {
+      const compMove = getComputerMove();
+
+      if (playerMove === 'Paper') {
+        if (compMove === 'Rock') {
+          result = 'You won';
+        } else if (compMove === 'Paper') {
+          result = 'Its a Tie';
+        } else if (compMove === 'Scissors') {
+          result = 'You lost';
+        }
+      }
+
+      else if (playerMove === 'Scissors') {
+        const compMove = getComputerMove();
+        if (compMove === 'Rock') {
+          result = 'You lost';
+        } else if (compMove === 'Paper') {
+          result = 'You won';
+        } else if (compMove === 'Scissors') {
+          result = 'Its a Tie';
+        }
+      }
+      else if (playerMove === 'Rock') {
+        const compMove = getComputerMove();
+        if (compMove === 'Rock') {
+          result = 'Its a Tie';
+        }
+        else if (compMove === 'Paper') {
+          result = 'You lost';
+        }
+        else {
+          result = 'You won';
+        }
+      }
+
+      alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}`);
+    }
 
     /*Functions for the computer move using Math.random()*/
     function getComputerMove() {
