@@ -159,6 +159,8 @@
       else if (result === 'Its a Tie') {
         score.ties += 1;
       }
+/*Using localStorage to store our score values to avoid them being reloaded back to 0 when the page is reloaded*/
+      localStorage.setItem('score', JSON.stringfy(score));
 
       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
 Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`);
