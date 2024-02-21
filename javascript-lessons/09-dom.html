@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document Object Model</title>
+  <title>Document Object Model Project</title>
 </head>
 <body>
-  <button>Hello</button>
+  <p>Subscribe button</p>
+  <button onclick="
+    subscribe();
+  " class ='js-sub-button'>subscribe</button>
 
   <script>
-    document.body.innerHTML = 'hey';
-    document.title = 'D';
-    /*document.body.innerText = "hi"*/
+    function subscribe() {
+      const buttonSubscribe = document.querySelector('.js-sub-button');
+
+      if (buttonSubscribe.innerText === 'subscribe') {
+        buttonSubscribe.innerHTML = 'subscribed';
+      }
+      else {
+        buttonSubscribe.innerHTML = 'subscribe';
+      }
+    }
+  </script>
+    
   </script>
 </body>
 </html>
