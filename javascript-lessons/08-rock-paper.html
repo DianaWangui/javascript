@@ -73,9 +73,7 @@
 <!--RESET BUTTON-->
   <div class="score-class">
     <button onclick="
-      score.wins = 0;
-      score.loses = 0;
-      score.ties = 0;
+      localStorage.removeItem('score');
       " >
     Reset Scores Now
     </button>
@@ -107,13 +105,20 @@
 
   <!--Javascript-->
   <script>
-    /* let randomNum = Math.random(); */
+    let score = JSON.parse(localStorage.getItem('score'));
+    console.log(score) || {
+        wins: 0,
+        loses: 0,
+        ties: 0
+      };
 
-    const score = {
-      wins: 0,
-      loses: 0,
-      ties: 0
-    };
+    // if (!score) {
+    //   score = {
+    //     wins: 0,
+    //     loses: 0,
+    //     ties: 0
+    //   };
+    // }
     /*Function to play game and inputing player move and comparing to computer move*/
     function playerMove(playerMove) {
       const compMove = getComputerMove();
@@ -160,13 +165,13 @@
         score.ties += 1;
       }
 /*Using localStorage to store our score values to avoid them being reloaded back to 0 when the page is reloaded*/
-      localStorage.setItem('score', JSON.stringfy(score));
+      localStorage.setItem('score', JSON.stringify(score));
 
       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
 Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`);
     }
 
-    /*Functions for the computer move using Math.random()*/
+/*Functions for the computer move using Math.random()*/
     function getComputerMove() {
       randomNum = Math.random();
       let compMove = '';
