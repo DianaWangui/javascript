@@ -112,6 +112,10 @@
 
   <!--USING THE DOM TO SET THE SCORES INSIDE THE HTML DOCUMENT -->
 
+  <p class="score-paragraph">
+
+  </p>
+
   <!--Javascript-->
   <script>
     let score = JSON.parse(localStorage.getItem('score')) || {
@@ -119,6 +123,9 @@
         loses: 0,
         ties: 0
       };
+
+    document.querySelector('.score-paragraph').innerHTML = `Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`;
+
 
     // if (!score) {
     //   score = {
@@ -128,9 +135,7 @@
     //   };
     // }
     /*Function to play game and inputing player move and comparing to computer move*/
-    function playerMove(playerMove) {
-      const compMove = getComputerMove();
-      let result = '';
+    updateScoreElement();
 
       if (playerMove === 'Paper') {
         if (compMove === 'Rock') {
@@ -175,8 +180,14 @@
 /*Using localStorage to store our score values to avoid them being reloaded back to 0 when the page is reloaded*/
       localStorage.setItem('score', JSON.stringify(score));
 
+      updateScoreElement();
+
       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
 Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`);
+    
+
+    function updateScoreElement() {
+      document.querySelector('.score-paragraph').innerHTML = `Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`;
     }
 
 /*Functions for the computer move using Math.random()*/
