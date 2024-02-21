@@ -73,9 +73,9 @@
 <!--RESET BUTTON-->
   <div class="score-class">
     <button onclick="
-      wins = 0;
-      loses = 0;
-      ties = 0;
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
       localStorage.removeItem('score');
       " >
     Reset Scores Now
@@ -108,8 +108,7 @@
 
   <!--Javascript-->
   <script>
-    let score = JSON.parse(localStorage.getItem('score'));
-    console.log(score) || {
+    let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         loses: 0,
         ties: 0
