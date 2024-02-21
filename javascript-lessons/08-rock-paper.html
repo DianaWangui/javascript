@@ -44,6 +44,25 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 10px;
+      
+    }
+    .score-class {
+      border-radius: 0;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+    }
+    .score-class button {
+      border-radius: 0;
+      background-color: rgba(238, 40, 40, 0.918);
+      height: 50px;
+      width: 150px;
+      border: 1px solid black;
+      font-weight: bold;
+      font-size: 13px;
+      color: white;
     }
   </style>
 </head>
@@ -51,6 +70,16 @@
   <h1>ROCK PAPER SCISSORS GAME</h1>
   <P>Want to take your mind off thinking for a bit?</P>
   <p>Lets play a game mmh!!</p>
+<!--RESET BUTTON-->
+  <div class="score-class">
+    <button onclick="
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      " >
+    Reset Scores Now
+    </button>
+  </div>
 
 <!--ROCK-->
   <div class="game">
@@ -75,14 +104,6 @@
     </button>
 
   </div>
-  <!--RESET BUTTON-->
-<button onclick="
-    score.wins = 0;
-    score.loses = 0;
-    score.ties = 0;
-">
-  Reset Scores Now
-</button>
 
   <!--Javascript-->
   <script>
