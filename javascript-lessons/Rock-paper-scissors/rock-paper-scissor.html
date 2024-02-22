@@ -6,8 +6,10 @@
   <title>Rock Paper Scissors Game</title>
   <style>
     body {
-      background-color: rgb(250, 227, 171);
+      background-color: rgb(25, 25, 25);
       margin: 0;
+      color: white;
+      font-family: Arial;
     }
     h1 {
       text-align: center;
@@ -15,6 +17,7 @@
       background-color: white;
       margin-top: 0;
       padding: 10px;
+      color: black;
     }
     p {
       text-align: center;
@@ -182,9 +185,7 @@
       localStorage.setItem('score', JSON.stringify(score));
       
       updateScoreElement();
-
       document.querySelector('.js-result').innerHTML = result;
-
       document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. Computer picked ${compMove}.`;
       
 //       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
