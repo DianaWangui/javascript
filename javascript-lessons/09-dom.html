@@ -4,14 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document Object Model Project</title>
+  <style>
+    .subscribe-button {
+      background-color: black;
+      color: white;
+      /*width: 90px;*/
+      border-radius: 50px;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      cursor: pointer;
+    }
+    .subscribe-button:hover {
+      opacity: 0.8;
+    }
+    .subscribe-button:active {
+      opacity: 0.6;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <p>Subscribe button</p>
   <button onclick="
     subscribe();
-  " class ='js-sub-button'>subscribe</button>
+  " class ='js-sub-button subscribe-button'>subscribe</button>
 
   <p>Amazon Shipping Calculator</p>
+
   <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="
     handleCostKeydown(event);
   " >
@@ -48,6 +73,8 @@
 
       if (buttonSubscribe.innerText === 'subscribe') {
         buttonSubscribe.innerHTML = 'subscribed';
+        /*Adding class attribute using js*/
+        buttonSubscribe.classList.add('is-subscribed');
       }
       else {
         buttonSubscribe.innerHTML = 'subscribe';
