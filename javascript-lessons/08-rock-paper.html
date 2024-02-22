@@ -81,6 +81,7 @@
       score.loses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
+      updateScoreElement();
       " >
     Reset Scores Now
     </button>
@@ -112,9 +113,10 @@
 
   <!--USING THE DOM TO SET THE SCORES INSIDE THE HTML DOCUMENT -->
 
-  <p class="score-paragraph">
+  <p class="js-result"></p>
+  <p class="js-moves"></p>
 
-  </p>
+  <p class="score-paragraph"></p>
 
   <!--Javascript-->
   <script>
@@ -124,7 +126,8 @@
         ties: 0
       };
 
-    document.querySelector('.score-paragraph').innerHTML = `Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`;
+      
+      updateScoreElement();
 
 
     // if (!score) {
@@ -135,7 +138,9 @@
     //   };
     // }
     /*Function to play game and inputing player move and comparing to computer move*/
-    updateScoreElement();
+    function playerMove(playerMove) {
+      const compMove = getComputerMove();
+      let result = '';
 
       if (playerMove === 'Paper') {
         if (compMove === 'Rock') {
@@ -179,17 +184,22 @@
       }
 /*Using localStorage to store our score values to avoid them being reloaded back to 0 when the page is reloaded*/
       localStorage.setItem('score', JSON.stringify(score));
-
+      
       updateScoreElement();
 
-      alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
-Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`);
-    
+      document.querySelector('.js-result').innerHTML = result;
+
+      document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. Computer picked ${compMove}.`;
+      
+//       alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}
+// Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`);
+}
+
+/*update function to the element to be posted inside the html body*/
 
     function updateScoreElement() {
       document.querySelector('.score-paragraph').innerHTML = `Wins: ${score.wins}. Losses: ${score.loses}. Ties: ${score.ties}`;
     }
-
 /*Functions for the computer move using Math.random()*/
     function getComputerMove() {
       randomNum = Math.random();
