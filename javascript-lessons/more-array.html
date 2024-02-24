@@ -13,6 +13,12 @@
     const array1 = [1, 2, 3];
     /*Copying content of array1 to array2 using .slice() function*/
     const array2 = array1.slice();
+    array2.push(100);
+    console.log(array2);
+
+    /*How to access values of an array without the use of indexes*/
+    const [firstValue, secondValue] = array2;
+    console.log(firstValue);
 
   </script>
   
