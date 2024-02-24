@@ -15,7 +15,7 @@ function autoPlay() {
     intervalId = setInterval(function() {
       const playMove = getComputerMove();
       playGame(playMove);
-    }, 1000);
+    }, 2000);
     isautoplaying = true;
   } else {
     clearInterval(intervalId);
