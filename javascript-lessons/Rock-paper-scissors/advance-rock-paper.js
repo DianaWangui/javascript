@@ -4,6 +4,24 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties: 0
 };
 updateScoreElement();
+
+/*Auto play game advanced functions using interval functions */
+
+let isautoplaying = false;
+let intervalId;
+
+function autoPlay() {
+  if (isautoplaying) {
+    intervalId = setInterval(function() {
+      const playMove = getComputerMove();
+      playerMove(playMove);
+    }, 1000);
+    isautoplaying = true;
+  } else {
+    clearInterval(intervalId);
+    isautoplaying = false;
+  }
+}
 /*Function to play game and inputing player move and comparing to computer move*/
 function playerMove(playerMove) {
   const compMove = getComputerMove();
