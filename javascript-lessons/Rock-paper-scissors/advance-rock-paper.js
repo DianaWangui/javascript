@@ -22,6 +22,7 @@ function autoPlay() {
     isautoplaying = false;
   }
 }
+
 /*Function to play game and inputing player move and comparing to computer move*/
 function playGame(playerMove) {
   const compMove = getComputerMove();
