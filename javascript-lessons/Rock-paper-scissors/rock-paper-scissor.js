@@ -26,7 +26,6 @@ function playerMove(playerMove) {
       result = 'You lost';
     }
   }
-
   else if (playerMove === 'Scissors') {
     if (compMove === 'Rock') {
       result = 'You lost';
