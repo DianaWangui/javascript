@@ -11,10 +11,10 @@ let isautoplaying = false;
 let intervalId;
 
 function autoPlay() {
-  if (isautoplaying) {
+  if (!isautoplaying) {
     intervalId = setInterval(function() {
       const playMove = getComputerMove();
-      playerMove(playMove);
+      playGame(playMove);
     }, 1000);
     isautoplaying = true;
   } else {
@@ -23,7 +23,7 @@ function autoPlay() {
   }
 }
 /*Function to play game and inputing player move and comparing to computer move*/
-function playerMove(playerMove) {
+function playGame(playerMove) {
   const compMove = getComputerMove();
   let result = '';
 

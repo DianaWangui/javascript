@@ -58,15 +58,12 @@ img {
   margin: 0px;
   padding-top: 20px;
 }
-
-.score-class,
-.autoplay-button {
+.autoplay-button, .score-button {
   border-radius: 0;
   background-color: rgba(238, 40, 40, 0.918);
   height: 50px;
   width: 150px;
-  border: 1px solid rgba(238, 40, 40, 0.918);
-  ;
+  border: none;
   border-radius: 5px;
   font-weight: bold;
   font-size: 13px;

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" href="rock-paper-scissor.css">
+  <link rel="stylesheet" href="advance-rock-paper.css">
 </head>
 <body>
   <h1>ROCK PAPER SCISSORS GAME</h1>
@@ -15,21 +15,21 @@
 <!--ROCK-->
   <div class="game">
     <button onclick="
-      playerMove('Rock');
+      playGame('Rock');
     ">
       <img src="images/Rock.png" alt="">
     </button>
 
 <!--PAPER-->
     <button onclick="
-      playerMove('Paper');
+      playGame('Paper');
     ">
       <img src="images/Paper.png" alt="">
     </button>
 
 <!--SCISSORS-->
     <button onclick="
-    playerMove('Scissors');
+    playGame('Scissors');
     ">
       <img src="images/Scissors.png" alt=""> 
     </button>
@@ -51,9 +51,10 @@
       score.ties = 0;
       localStorage.removeItem('score');
       updateScoreElement();
-      " >
+      " class="score-button">
     Reset Scores Now
     </button>
+
     <button class="autoplay-button" onclick="
       autoPlay();
 
@@ -61,7 +62,7 @@
   </div>
 
   <!--Javascript-->
-  <script src="rock-paper-scissor.js">   
+  <script src="advance-rock-paper.js">   
   </script>
 </body>
 </html>
