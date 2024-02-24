@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="rock-paper-scissor.css">
+</head>
+<body>
+  <h1>ROCK PAPER SCISSORS GAME</h1>
+  <P>Want to take your mind off thinking for a bit?</P>
+  <p>Lets play a game mmh!!</p>
+
+
+<!--ROCK-->
+  <div class="game">
+    <button onclick="
+      playerMove('Rock');
+    ">
+      <img src="images/Rock.png" alt="">
+    </button>
+
+<!--PAPER-->
+    <button onclick="
+      playerMove('Paper');
+    ">
+      <img src="images/Paper.png" alt="">
+    </button>
+
+<!--SCISSORS-->
+    <button onclick="
+    playerMove('Scissors');
+    ">
+      <img src="images/Scissors.png" alt=""> 
+    </button>
+
+  </div>
+
+  <!--USING THE DOM TO SET THE SCORES INSIDE THE HTML DOCUMENT -->
+
+  <p class="js-result"> Win</p>
+  <p class="js-moves score"> 
+  </p>
+
+  <p class="score-paragraph"></p>
+  <!--RESET BUTTON-->
+  <div class="score-class">
+    <button onclick="
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+      " >
+    Reset Scores Now
+    </button>
+  </div>
+
+  <!--Javascript-->
+  <script src="rock-paper-scissor.js">   
+  </script>
+
+</body>
+</html>
