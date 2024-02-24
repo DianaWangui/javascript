@@ -59,7 +59,8 @@ img {
   padding-top: 20px;
 }
 
-.score-class button {
+.score-class,
+.autoplay-button {
   border-radius: 0;
   background-color: rgba(238, 40, 40, 0.918);
   height: 50px;

@@ -20,6 +20,34 @@
     const [firstValue, secondValue] = array2;
     console.log(firstValue);
 
+    /*Using break to exit a loop prematurely*/
+    for (let i = 0; i < 10; i++) {
+      if (i === 8) {
+        break;
+      }
+      console.log(i);
+    }
+
+    /*using continue to skip one iteration of a loop exaple below will skip 3 and continue */
+    for (let i = 0; i < 10; i++) {
+      if (i === 3) {
+        continue;
+      }
+      console.log(i);
+    }
+
+    /*Using while loop and continue*/
+
+    let i = 1;
+
+    while (i <= 10) {
+      if (i % 3 === 0) {
+        i++;
+        continue;
+      }
+      console.log(i);
+    }
+
   </script>
   
 </body>

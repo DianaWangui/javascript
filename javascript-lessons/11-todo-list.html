@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="11-todo-list.css"> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple ToDo List</title>
 </head>
 <body>
   <p>ToDo List</p>
-  <input type="text" placeholder="Todo name" class="js-name-input" onkeydown="">
-  <input type="date" class="js-due-date-input">
+  <div class="todo-input-grid">
+  <input type="text" placeholder="Todo name" class="js-name-input name-input" onkeydown="">
+  <input type="date" class="js-due-date-input due-date">
   <button onclick="
     addTodoList();
-  ">ADD</button>
+  " class="add-button">ADD</button>
+  </div>
 
-  <div class="js-todo-list"></div>
+  <div class="js-todo-list todo-grid"></div>
 
 
   <script src="11-todo-list.js">
