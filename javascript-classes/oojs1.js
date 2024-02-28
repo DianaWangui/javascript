@@ -12,7 +12,22 @@ class Shape {
     console.log(per);
   }
 }
+
+/*Inheritance class */
+class Square extends Shape {
+  constructor(sideLength) {
+    super('square', 4, sideLength); 
+    
+  }
+  calcArea() {
+    const area = this.sideLength * this.sideLength;
+    console.log(area);
+  }
+}
+
+const squareAre = new Square(3);
+squareAre.calcArea();
 const square = new Shape ('square', 4, 5);
 square.calcPerimeter();
-const triangle = new Shape ('triangle', 3, 3);
+const triangle = new Shape ('triangle', 3, 10);
 triangle.calcPerimeter();
